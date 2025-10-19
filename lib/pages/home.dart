@@ -31,7 +31,7 @@ class _HomeState extends State<Home> {
           ),
         ),
         title: Text(
-          'Pokedex',
+          'Pokédex',
           style: TextStyle(
             color: Colors.white,
             fontSize: 28,
