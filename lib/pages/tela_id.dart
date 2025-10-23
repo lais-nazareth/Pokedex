@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:pokedex_app/pages/arguments.dart';
 import 'package:pokedex_app/pages/home.dart';
+import 'package:pokedex_app/pages/tela_lista.dart';
 
 class NomeId extends StatefulWidget {
   static String routeName = '/id';
@@ -40,18 +42,23 @@ class _NomeIdState extends State<NomeId> {
           children: [
             TextField(
               controller: _controller,
-            )
+              decoration: InputDecoration(
+                labelText: "Digite o Nome/Id:",
+                labelStyle: TextStyle(fontSize: 30)
+              ),
+              style: TextStyle(fontSize: 20),
+            ),
             
             ElevatedButton(
-              onPressed: (_habitat != null) ? () {
+              onPressed: () {
                 Navigator.pushNamed(
                   context, 
                   Lista.routeName,
                   arguments: Arguments(
                     'Lista',
-                    url! + _habitat!
+                    url! + _controller.text
                   ));
-              } : null,
+              },
 
               style: ElevatedButton.styleFrom(
                 disabledBackgroundColor: Colors.blueGrey,
@@ -64,7 +71,7 @@ class _NomeIdState extends State<NomeId> {
 
               ),
               child: Text(
-                'Selecionar Habitat',
+                'Selecionar Nome/Id',
                 style: TextStyle(color: Colors.white, fontSize: 20),
               )
             )
