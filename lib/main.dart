@@ -14,8 +14,7 @@ void main(){
       Habitat.routeName : (context) => Habitat(),
       Tipo.routeName : (context) => Tipo(),
       NomeId.routeName : (context) => NomeId(),
-      Lista.routeName : (context) => Lista()
-      
+      Lista.routeName : (context) => Lista()      
     },
     debugShowCheckedModeBanner: false,
     title: "Pokedex",
